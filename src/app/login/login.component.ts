@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
     this.loginService.register(this.email,this.password)
     .subscribe(
       (res) => {
-        console.log("in login comp", res);
+        console.log("in signup comp", res);
+        this.router.navigate(['/register']);
       },
       (error) => {
         console.log("Some error has occurred",error);

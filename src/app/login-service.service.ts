@@ -34,7 +34,8 @@ export class LoginServiceService {
     const body={
       username,password
     }
-     return this.http.post<User>(this.baseUrl+"/register",body).pipe(
+     return this.http.post<User>(this.baseUrl+"/register",body)
+     .pipe(
           map((response: User) => response)
         );
   }
